@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.2" />
     <PackageReference Include="Microsoft.ClearScript.linux-x64" Version="7.3.5" />
   </ItemGroup>
 
