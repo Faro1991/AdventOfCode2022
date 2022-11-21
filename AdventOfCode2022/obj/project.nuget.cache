@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "8bOzYJ/YojuXMRF3gwnzKBSRt0MjdEMOJcmmyMYjjyvgyUK54dp4VbwYLS7AYQAPGTiaD01x799TcNSA+m204g==",
+  "success": true,
+  "projectFilePath": "/home/fred/Documents/Coding/AoC/AdventOfCode2022/AdventOfCode2022/AdventOfCode2022.csproj",
+  "expectedPackageFiles": [
+    "/home/fred/.nuget/packages/microsoft.clearscript.core/7.3.5/microsoft.clearscript.core.7.3.5.nupkg.sha512",
+    "/home/fred/.nuget/packages/microsoft.clearscript.linux-x64/7.3.5/microsoft.clearscript.linux-x64.7.3.5.nupkg.sha512",
+    "/home/fred/.nuget/packages/microsoft.clearscript.v8/7.3.5/microsoft.clearscript.v8.7.3.5.nupkg.sha512",
+    "/home/fred/.nuget/packages/microsoft.clearscript.v8.icudata/7.3.5/microsoft.clearscript.v8.icudata.7.3.5.nupkg.sha512",
+    "/home/fred/.nuget/packages/microsoft.clearscript.v8.native.linux-x64/7.3.5/microsoft.clearscript.v8.native.linux-x64.7.3.5.nupkg.sha512",
+    "/home/fred/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/home/fred/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.9/microsoft.aspnetcore.app.ref.6.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
