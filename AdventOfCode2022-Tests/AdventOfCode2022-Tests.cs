@@ -1,11 +1,11 @@
 using Xunit;
 
-namespace AdventOfCode2022_Tests;
+namespace AdventOfCode2022.Tests;
 
-public class UnitTest1
+public class CalendarTest
 {
     [Fact]
-    public void Test1()
+    public void DayTester()
     {
 
     }

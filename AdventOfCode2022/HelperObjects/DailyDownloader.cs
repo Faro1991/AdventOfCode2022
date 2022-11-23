@@ -7,11 +7,13 @@ namespace AdventOfCode2022.HelperObjects
         public static async void Download()
         {
 
-            var Today = DateTime.Today;
-            var December1st = new DateTime(2022, 12, 1);
-            TimeSpan DifferenceToDecember1st = Today - December1st;
-            var FileDirectory = "../Day" + DifferenceToDecember1st;
-            var FileName = "InputDay" + DifferenceToDecember1st + ".txt";
+            long CurrentAoCDay = DayCalculator.AoCDay();
+            if (CurrentAoCDay < 0)
+            {
+                throw new Exception("Afraid it's not December yet. Please come back later.");
+            }
+            var FileDirectory = "../Days/Day" + CurrentAoCDay;
+            var FileName = "InputDay" + CurrentAoCDay + ".txt";
             var FilePath = FileDirectory + "/" + FileName;
 
             if (!System.IO.Directory.Exists(FileDirectory))
@@ -22,7 +24,7 @@ namespace AdventOfCode2022.HelperObjects
             if (!System.IO.File.Exists(FilePath))
             {
                 var AoCDomain = @".adventofcode.com";
-                var URL = @"https://adventofcode.com/2022/day/" + DifferenceToDecember1st + @"/input";
+                var URL = @"https://adventofcode.com/2022/day/" + CurrentAoCDay + @"/input";
                 var AutCVal = System.IO.File.ReadAllText("../AuthCookie.autc");
 
                 try
