@@ -1,29 +1,31 @@
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Running;
-using System.Collections.Generic;
-using System.IO;
 namespace AdventOfCode2022.HelperObjects
 {
     public abstract class DayBase
     {
-        [Benchmark]
         public abstract long PartOne();
-        [Benchmark]
         public abstract long PartTwo();
 
         public virtual void DayRun()
         {
             try
             {
-                List<string> inputLines = new List<string>();
-                var currentFileNameList = new DirectoryInfo(".").GetFiles("InputDay*.txt");
-                foreach (var file in currentFileNameList)
-                {
-                    inputLines = InputParser.LinesToList(File.ReadAllText(file.FullName));
-                }
                 long ResultPartOne = PartOne();
                 long ResultPartTwo = PartTwo();
-                BenchmarkRunner.Run(this.GetType());
+
+                var Benchmark = BenchmarkRunner.Run(this.GetType(), new DebugInProcessConfig());
+
+                Console.WriteLine("Result part 1: " + ResultPartOne);
+                Console.WriteLine("Result part 2: " + ResultPartTwo);
+
+                //TODO: auto update readme
+                //if (!File.ReadAllText("../../Readme.md").Contains($"### Day {DayCalculator.AoCDay()}"))
+                //{
+                //    var Header = Benchmark.Table.FullHeader
+                //    File.AppendAllText("../../Readme.md",$"### Day {DayCalculator.AoCDay()}\n{Benchmark.Table}");
+                //}
             }
             catch (NotImplementedException NotDoneYet)
             {

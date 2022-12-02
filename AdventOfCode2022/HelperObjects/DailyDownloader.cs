@@ -4,7 +4,7 @@ namespace AdventOfCode2022.HelperObjects
 {
     static class DailyDownloader
     {
-        public static async void Download()
+        public static void Download()
         {
 
             long CurrentAoCDay = DayCalculator.AoCDay();
@@ -12,7 +12,7 @@ namespace AdventOfCode2022.HelperObjects
             {
                 throw new Exception("Afraid it's not December yet. Please come back later.");
             }
-            var FileDirectory = "../Days/Day" + CurrentAoCDay;
+            var FileDirectory = "Days/Day" + CurrentAoCDay;
             var FileName = "InputDay" + CurrentAoCDay + ".txt";
             var FilePath = FileDirectory + "/" + FileName;
 
@@ -30,14 +30,16 @@ namespace AdventOfCode2022.HelperObjects
                 try
                 {
                     using (HttpClientHandler Handler = new HttpClientHandler() {CookieContainer = new CookieContainer()})
-                    using (HttpClient Download = new HttpClient())
+                    using (HttpClient Download = new HttpClient(Handler))
                     {
                         Cookie AuthCookie = new Cookie("session", AutCVal) { Domain = AoCDomain};
                         Handler.CookieContainer.Add(AuthCookie);
-                        var Result = await Download.GetAsync(URL);
+                        var Result = Task.Run(() => Download.GetAsync(URL)).Result;
                         Result.EnsureSuccessStatusCode();
+                        var Content = Task.Run(() => Result.Content.ReadAsStringAsync());
+                        Content.Wait();
 
-                        System.IO.File.WriteAllText(FilePath, Result.Content.ToString());
+                        System.IO.File.WriteAllText(FilePath, Content.Result);
                     }
                 }
                 catch (HttpRequestException RequestError)
