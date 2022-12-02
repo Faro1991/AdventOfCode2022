@@ -24,11 +24,12 @@ This year's objectives are (as of Nov 21st, 2022):
 ## Results
 
 ### Relevant execution parameters (as far as BenchmarkDotNet is concerned)
-
+```
 BenchmarkDotNet=v0.13.2, OS=manjaro 
 AMD FX(tm)-8300, 1 CPU, 8 logical and 4 physical cores
 .NET SDK=6.0.109
   [Host] : .NET 6.0.9 (6.0.922.46401), X64 RyuJIT AVX DEBUG  [AttachedDebugger]
+```
 
 ### Day 1
 
