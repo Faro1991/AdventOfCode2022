@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode2022", "AdventO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode2022-Tests", "AdventOfCode2022-Tests\AdventOfCode2022-Tests.csproj", "{2364B784-2158-472B-9A7B-35C7D5F64E45}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpHelpers", "FSharpHelpers\FSharpHelpers.fsproj", "{1D0B9582-F140-40AC-8568-6FA06BB892FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{2364B784-2158-472B-9A7B-35C7D5F64E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2364B784-2158-472B-9A7B-35C7D5F64E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2364B784-2158-472B-9A7B-35C7D5F64E45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D0B9582-F140-40AC-8568-6FA06BB892FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D0B9582-F140-40AC-8568-6FA06BB892FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D0B9582-F140-40AC-8568-6FA06BB892FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D0B9582-F140-40AC-8568-6FA06BB892FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
