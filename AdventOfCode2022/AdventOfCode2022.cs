@@ -14,7 +14,7 @@ namespace AdventOfCode2022
             {
                 if (e.Message != "Afraid it's not December yet. Please come back later.")
                 {
-                    throw e;
+                    throw new Exception(e.Message + " (Forwarded from DailyDownloader.cs, please check it as well.)");
                 }
             }
             //var Current = new Day2();
