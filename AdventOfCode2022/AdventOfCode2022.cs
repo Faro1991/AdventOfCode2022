@@ -17,8 +17,8 @@ namespace AdventOfCode2022
                     throw e;
                 }
             }
-            var Current = new Day2();
-            Current.DayRun();
+            //var Current = new Day2();
+            //Current.DayRun();
         }
     }
 }
