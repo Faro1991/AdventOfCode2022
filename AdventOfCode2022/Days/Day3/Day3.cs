@@ -4,7 +4,7 @@ using Microsoft.ClearScript.V8;
 
 namespace AdventOfCode2022
 {
-    class Day3 : DayBase
+    public class Day3 : DayBase
     {
         public List<string> input = InputParser.LinesToList(System.IO.File.ReadAllText("Days/Day3/InputDay3.txt"), true);
         private string _scriptSource = File.ReadAllText("Days/Day3/Solver.js");
