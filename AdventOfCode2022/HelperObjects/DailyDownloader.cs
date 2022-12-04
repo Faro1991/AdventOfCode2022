@@ -12,10 +12,10 @@ namespace AdventOfCode2022.HelperObjects
             {
                 throw new Exception("Afraid it's not December yet. Please come back later.");
             }
-            //if (!DayCalculator.OnlineYet())
-            //{
-            //    throw new Exception("Challenge not online yet, wait for midnight EST.");
-            //}
+            if (!DayCalculator.OnlineYet())
+            {
+                throw new Exception("Challenge not online yet, wait for midnight EST.");
+            }
             var FileDirectory = "Days/Day" + CurrentAoCDay;
             var FileName = "InputDay" + CurrentAoCDay + ".txt";
             var FilePath = FileDirectory + "/" + FileName;

@@ -11,7 +11,7 @@ namespace AdventOfCode2022.HelperObjects
         }
         public static bool OnlineYet()
         {
-            var IsEstMidnight = _today.ToUniversalTime().AddHours(-5);
+            var IsEstMidnight = DateTime.Now.ToUniversalTime().AddHours(-5);
             var OwnDifference = _today - _today.ToUniversalTime();
             if (OwnDifference.Hours > 0)
             {
