@@ -18,9 +18,13 @@ namespace AdventOfCode2022.HelperObjects.DataTypes
         }
         public string PopCrate()
         {
-            var Last = this._crates.Last();
-            this._crates.RemoveAt(this._crates.Count - 1); 
-            return Last;
+            if (this._crates.Count > 0)
+            {
+                var Last = this._crates.Last();
+                this._crates.RemoveAt(this._crates.Count - 1); 
+                return Last;
+            }
+            return "Ä";
         }
     }
 }

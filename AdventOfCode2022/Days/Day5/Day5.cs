@@ -10,12 +10,18 @@ namespace AdventOfCode2022
     {
         public List<string> input = InputParser.LinesToList(System.IO.File.ReadAllText("Days/Day5/InputDay5.txt"), false);
         private List<CrateStack> _stacks = new List<CrateStack>();
+        [Benchmark]
         public override long PartOne()
         {
+            var ResultPartOne = this.PartOne(true);
+            this._stacks = new List<CrateStack>();
             return 0;
         }
+        [Benchmark]
         public override long PartTwo()
         {
+            var ResultPartTwo = this.PartTwo(true);
+            this._stacks = new List<CrateStack>();
             return 0;
         }
         public override void DayRun()
