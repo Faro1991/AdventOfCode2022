@@ -6,14 +6,14 @@ namespace AdventOfCode2022.Tests
     public static class Day1_Tests
     {
         [Fact]
-        public static void TestDayOne()
+        public static void TestPartOne()
         {
             Day1 One = new Day1();
             One.input = InputParser.LinesToList(System.IO.File.ReadAllText("Days/Day1/TestInput.txt"), false);
             Assert.Equal(24000, One.PartOne());
         }
         [Fact]
-        public static void TestDayTwo()
+        public static void TestPartTwo()
         {
             Day1 One = new Day1();
             One.input = InputParser.LinesToList(System.IO.File.ReadAllText("Days/Day1/TestInput.txt"), false);

@@ -25,7 +25,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/fred/Documents/Coding/AoC/AdventOfCode2022/FSharpHelpers/FSharpHelpers.fsproj": {
+                "projectPath": "/home/fred/Documents/Coding/AoC/AdventOfCode2022/FSharpHelpers/FSharpHelpers.fsproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -45,6 +49,67 @@
             "Microsoft.ClearScript.linux-x64": {
               "target": "Package",
               "version": "[7.3.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.9, 6.0.9]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.109/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/fred/Documents/Coding/AoC/AdventOfCode2022/FSharpHelpers/FSharpHelpers.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/fred/Documents/Coding/AoC/AdventOfCode2022/FSharpHelpers/FSharpHelpers.fsproj",
+        "projectName": "FSharpHelpers",
+        "projectPath": "/home/fred/Documents/Coding/AoC/AdventOfCode2022/FSharpHelpers/FSharpHelpers.fsproj",
+        "packagesPath": "/home/fred/.nuget/packages/",
+        "outputPath": "/home/fred/Documents/Coding/AoC/AdventOfCode2022/FSharpHelpers/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/fred/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[6.0.1, )",
+              "generatePathProperty": true
             }
           },
           "imports": [

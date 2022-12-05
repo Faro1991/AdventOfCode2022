@@ -6,7 +6,7 @@ namespace AdventOfCode2022.Tests
     public static class Day2_Tests
     {
         [Fact]
-        public static void TestDayOne()
+        public static void TestPartOne()
         {
             Day2 Two = new Day2();
             Two.input = InputParser.LinesToList(System.IO.File.ReadAllText("Days/Day2/TestInput.txt"), false);
@@ -16,7 +16,7 @@ namespace AdventOfCode2022.Tests
             Assert.Equal(51, Two.PartOne());
         }
         [Fact]
-        public static void TestDayTwo()
+        public static void TestPartTwo()
         {
             Day2 Two = new Day2();
             Two.input = InputParser.LinesToList(System.IO.File.ReadAllText("Days/Day2/TestInput.txt"), false);

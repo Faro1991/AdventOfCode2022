@@ -34,12 +34,14 @@ type scoreCalculator () =
                                                 | "A" -> "Z"
                                                 | "B" -> "X"
                                                 | "C" -> "Y"
-                                                | _ -> "S"
+                                                | _ -> "E"
                                     | "Y" -> opponentChoice
                                     | "Z" -> match opponentChoice with
                                                 | "A" -> "Y"
                                                 | "B" -> "Z"
                                                 | "C" -> "X"
+                                                | _ -> "E"
+                                    | _ -> "E"
                                     |> pointsMatch
                 let roundPoints = match neededResult with
                                     | "X" -> 0
