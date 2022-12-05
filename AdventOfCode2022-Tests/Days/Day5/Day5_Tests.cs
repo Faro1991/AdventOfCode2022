@@ -10,14 +10,14 @@ namespace AdventOfCode2022.Tests
         {
             Day5 Five = new Day5();
             Five.input = InputParser.LinesToList(System.IO.File.ReadAllText("Days/Day5/TestInput.txt"), false);
-            Assert.Equal(2, Five.PartOne());
+            Assert.Equal("CMZ", Five.PartOne(true));
         }
         [Fact]
         public static void TestPartTwo()
         {
             Day5 Five = new Day5();
             Five.input = InputParser.LinesToList(System.IO.File.ReadAllText("Days/Day5/TestInput.txt"), false);
-            Assert.Equal(4, Five.PartTwo());
+            Assert.Equal("MCD", Five.PartTwo(true));
         }
         public static void RunBothTests()
         {
