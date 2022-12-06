@@ -17,7 +17,7 @@ namespace AdventOfCode2022
                     throw new Exception(e.Message + " (Forwarded from DailyDownloader.cs, please check it as well.)");
                 }
             }
-            var Current = new Day5();
+            var Current = new Day6();
             Current.DayRun();
         }
     }
