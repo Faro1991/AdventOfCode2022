@@ -19,6 +19,7 @@ namespace AdventOfCode2022.Tests
             Three.input = InputParser.LinesToList(System.IO.File.ReadAllText("Days/Day3/TestInput.txt"), false);
             Assert.Equal(70, Three.PartTwo());
         }
+        [Fact]
         public static void RunBothTests()
         {
             TestPartOne();
