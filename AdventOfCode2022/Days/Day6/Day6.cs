@@ -10,9 +10,8 @@ namespace AdventOfCode2022
         {
             for (int i = UniqueCharsNeeded; i < Input.Length; ++i)
             {
-                var CharsUntilNow = Input.Take(new Range(i-UniqueCharsNeeded, i)).ToList();
-                var UniqueChars = CharsUntilNow.Distinct().ToList();
-                if (UniqueChars.Count() == UniqueCharsNeeded)
+                var CharsUntilNow = Input.Take(new Range(i-UniqueCharsNeeded, i)).ToHashSet();
+                if (CharsUntilNow.Count() == UniqueCharsNeeded)
                 {
                     return i;
                 }
