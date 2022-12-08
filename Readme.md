@@ -23,6 +23,10 @@ This year's objectives are (as of Nov 21st, 2022):
 
 ## Results
 
+### Remarks
+
+I am fully aware that a benchmark like this is in itself useless in terms of information, as my code might perform differently on your machine, even my machine under a different OS or base load. This is just my personal "how much time would this realistically be wasting/how does it scale when run multiple times?" fun metric. I also have to cut some corners in implementations as e.g. BenchmarkDotNet seems to run through IEnumerable inputs starting with an empty input. Therefore, runs might be measured than they actually are faster as I'll essentially be skipping the entire algorithm if certain conditions aren't met.
+
 ### Relevant execution parameters (as far as BenchmarkDotNet is concerned)
 ```
 BenchmarkDotNet=v0.13.2, OS=manjaro 
@@ -72,3 +76,10 @@ AMD FX(tm)-8300, 1 CPU, 8 logical and 4 physical cores
 |-------- |-----------:|---------:|---------:|
 | PartOne |   634.6 us |  1.25 us |  0.97 us |
 | PartTwo | 5,191.0 us | 29.21 us | 25.89 us |
+
+### Day 7
+
+|  Method |     Mean |     Error |    StdDev |
+|-------- |---------:|----------:|----------:|
+| PartOne | 1.059 ms | 0.0135 ms | 0.0119 ms |
+| PartTwo | 1.053 ms | 0.0031 ms | 0.0026 ms |
