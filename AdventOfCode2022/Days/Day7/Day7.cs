@@ -27,7 +27,7 @@ namespace AdventOfCode2022
                 var start = Math.Min(DirList.IndexOf($"$ cd {name}") + 2, DirList.Count);
                 var RelevantPart = DirList.GetRange(start, Math.Abs(DirList.Count - start));
                 var ContextEnd = RelevantPart.FindIndex(x => x.StartsWith("$ "));
-                if (ContextEnd == -1)bn                 
+                if (ContextEnd == -1)                 
                 {
                     ContextEnd = RelevantPart.Count;
                 }
